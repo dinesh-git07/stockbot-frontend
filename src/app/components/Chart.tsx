@@ -216,7 +216,7 @@ function getChartOptions(theme: 'light' | 'dark'): DeepPartial<ChartOptions> {
     },
     localization: {
       timeFormatter: (time: Time) => {
-        const date = new Date(time * 1000);
+        const date = new Date(Number(time) * 1000);
         return date.toLocaleString('en-US', {
           weekday: 'short',
           year: 'numeric',
